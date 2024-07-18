@@ -1,0 +1,17 @@
+# CSA0656--DAA
+#include <stdio.h>
+int fibonacci(int n) {
+    if (n <= 0) return 0;
+    else if (n == 1) return 1;
+    else return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n_terms = 10;
+    printf("K.NIKHILL NANDAN-192211750\n");
+    printf("Fibonacci Series: ");
+    for (int i = 0; i < n_terms; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    return 0;
+}![Screenshot 2024-07-18 131355](https://github.com/user-attachments/assets/46149506-0411-4eea-8cab-5d8a72a3c8b9)
