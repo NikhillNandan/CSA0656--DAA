@@ -1,0 +1,15 @@
+![Screenshot 2024-07-18 133540](https://github.com/user-attachments/assets/1a83706d-c245-464e-8481-013dda3fa189)
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n < 0) return -1;
+    else if (n == 0 || n == 1) return 1;
+    else return n * factorial(n - 1);
+}
+
+int main() {
+    int number = 5;
+    printf("K.Nikhill Nandan-192211750\n");
+    printf("Factorial of %d is: %d\n", number, factorial(number));
+    return 0;
+}
