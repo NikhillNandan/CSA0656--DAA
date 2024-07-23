@@ -1,36 +1,20 @@
 #include <stdio.h>
-int binarySearch(int arr[], int low, int high, int x)
-{
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (arr[mid] == x)
-            return mid;
-        if (arr[mid] < x)
-            low = mid + 1;
-        else
-            high = mid - 1;
-    }
-    return -1;
-}
+#include <string.h>
+
 int main()
 {
-	int n;
-	printf("Nikhill K (192211750)\n");
-	printf("Enter the no of element in the array:");
-	scanf("%d",&n);
-    int arr[n];
-    printf("Enter the array element:\n");
-    for (int i=0;i<n;i++)
-    {
-    	scanf("%d",&arr[i]);
+	printf("NiKHILL nandan\n");
+	char str[100];
+	printf("Enter the String:");
+	scanf("%s",&str);
+	int len = strlen(str);
+	for (int i = 0, j = len - 1; i <= j; i++, j--) {
+		char c = str[i];
+		str[i] = str[j];
+		str[j] = c;
 	}
-    int x;
-    printf("Enter the target element:");
-    scanf("%d",&x);
-    int result = binarySearch(arr, 0, n - 1, x);
- 	if (result == -1)
-    	printf("Not found");
-  	else
-    	printf("Element is found at index %d", result);
-  	return 0;
+
+	printf("Reversed String: %s", str);
+
+	return 0;
 }
